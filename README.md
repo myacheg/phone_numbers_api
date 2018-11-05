@@ -1,24 +1,36 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Usage examples
+to generate a new number:
 
-* Ruby version
+```
+/numbers/new.json?user_name=UserName
+```
 
-* System dependencies
+to get a custom number (if available, otherwise you get a regular number):
 
-* Configuration
+```
+/numbers/new.json?user_name=UserName&number=111-222-3333
+```
 
-* Database creation
+response example:
 
-* Database initialization
+```
+{
+  user_name: "UserName",
+  number: "111-222-3333"
+}
+```
 
-* How to run the test suite
+## Tests
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+rspec spec
+```
 
-* Deployment instructions
+## What was used
 
-* ...
+```
+Ruby 2.5.1, Rails 5.2, rspec, pry
+```
